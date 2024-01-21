@@ -1,6 +1,6 @@
 const shortuuid = require('short-uuid');
 const logger = require('./logger');
-const constants = require("/constants");
+const constants = require("./constants");
 const {DynamoDBClient} = require("@aws-sdk/client-dynamodb");
 const {PutCommand, DynamoDBDocumentClient} = require("@aws-sdk/lib-dynamodb");
 const {SendMessageCommand, SQSClient} = require("@aws-sdk/client-sqs");
@@ -46,7 +46,11 @@ exports.handler = async function(event, context) {
     logger.info("Successfully added the details to Document Dynamo DB Table")
 
     // Adding details to Memory Dynamo DB table
-    const memory = { SessionId: conversation_id, History: [] };
+    const memory = {
+        SessionId: conversation_id,
+        History: [],
+        messages: [],
+    };
     const memTableCommand = new PutCommand({
         TableName: MEMORY_TABLE,
         Item: memory
