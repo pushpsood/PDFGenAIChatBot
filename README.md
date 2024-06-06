@@ -25,6 +25,8 @@ to run [LangChain](https://github.com/hwchase17/langchain), and [Amazon DynamoDB
 5. When a user chats with a PDF document and sends a prompt to the backend, a Lambda function retrieves the index from Pinecone and searches for information related to the prompt.
 6. A LLM then uses the results of this vector search, previous messages in the conversation to formulate a response to the user.
 
+![Architecture](https://github.com/pushpsood/PDFGenAIChatBot/blob/master/img/PDFChatApplication.jpg?raw=true)
+
 ## Deployment instructions
 
 ### Prerequisites
