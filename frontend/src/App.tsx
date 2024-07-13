@@ -51,4 +51,4 @@ function App() {
   return <RouterProvider router={router} />;
 }
 
-export default withAuthenticator(App, { hideSignUp: true });
+export default withAuthenticator(App, { hideSignUp: false });

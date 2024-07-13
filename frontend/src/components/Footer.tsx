@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
               width={20}
               className="mr-1.5 py-2 mx-2"
             />
-            <a href="https://github.com/aws-samples/serverless-pdf-chat">
+            <a href="https://github.com/pushpsood/PDFGenAIChatBot">
               Source code on GitHub
             </a>
           </div>
