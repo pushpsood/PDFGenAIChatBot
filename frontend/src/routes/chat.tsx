@@ -79,6 +79,7 @@ const Document: React.FC = () => {
         messages: [...conversation.messages, previewMessage],
       };
 
+      // @ts-ignore
       setConversation(updatedConversation);
     }
 
